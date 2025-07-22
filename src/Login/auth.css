@@ -1,0 +1,147 @@
+:root {
+  --main-color: #014976;
+  --secondary-color: #FBAE42;
+  --body-color: #f9f9f9;
+  --text-color: #333333;
+  --light-color: #f8f9fa;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: var(--body-color);
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+.toggle-btn {
+  margin-bottom: 20px;
+  color: var(--light-color) 
+}
+
+.toggle-btn button {
+  background-color: var(--secondary-color);
+  color: var(--light-color) ;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.card-container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 320px;
+  max-height: 1000px;
+  position: relative;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+    border: none; 
+  
+}
+
+
+
+
+.card-container.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */  
+  max-height: 1000px;
+  transition: max-height 0.5s ease; 
+  background-color: var(--main-color);
+  color: white;
+  backface-visibility: hidden;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  overflow: hidden; 
+}
+
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+  background-color: var(--light-color);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.input-group svg {
+  margin-right: 10px;
+  color: var(--main-color);
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  background-color: var(--secondary-color);
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--light-color);
+  margin-top: 15px;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: white;
+  display: block;
+  text-align: right;
+}
+
+.form-title {
+  color: var(--main-color);
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}

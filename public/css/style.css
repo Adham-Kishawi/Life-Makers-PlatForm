@@ -1,0 +1,548 @@
+/* ====== START: Variables ====== */
+/* Light Mode */
+:root {
+  --main-color: #014976;
+  --secondary-color: #FBAE42;
+  --card-color: hsl(41, 100%, 97%);
+  --body-color: #fff9f1;
+  --text-color: #333333;
+  --light-color: #f8f9fa;
+}
+
+/* Dark Mode */
+.dark-mode {
+ 
+  --body-color: #121212;
+  --card-color: #252525;
+  --text-color: #e0e0e0;
+ 
+}
+
+/* ====== END: Variables ====== */
+
+
+/* ====== START: Fonts ====== */
+@font-face {
+  font-family: 'Calibri RPT';
+  src: url('../fonts/rpt-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Calibri RPT';
+  src: url('../fonts/rpt-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('../fonts/calibri-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('../fonts/calibri-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+/* ====== END: Fonts ====== */
+
+
+/* ====== START: Global Style ====== */
+body {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background-color: var(--body-color);
+  font-family: 'Calibri RPT', 'Cairo', sans-serif !important;
+}
+
+
+html, body {
+  height: 100%;
+ 
+}
+
+.footer-respons {
+  display: flex  !important;
+  flex-direction: column;
+  min-height: 100vh   !important; 
+}
+
+.footer-respons .content {
+  flex: 1 !important;
+}
+ 
+
+/* ====== END: Global Style ====== */
+
+
+/* ====== START: Navbar ====== */
+/* الهيدر العادي */
+.site-header {
+  background-color: var(--main-color) !important;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 25px; 
+  display: flex;
+  align-items: center; 
+  padding: 0 10px;
+  font-size: 12px;
+  color: var(--light-color);
+}
+
+/* SVG icons */
+.site-header svg {
+  font-size: 14px;
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+/* Hover icons */
+.site-header svg:hover {
+  color: var(--secondary-color);
+}
+
+/* الروابط داخل الهيدر */
+.site-header a {
+  color: var(--light-color) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease;
+}
+
+.site-header a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* الوضع الليلي للهيدر */
+.dark-mode .site-header {
+  background-color: black !important; /* أو استخدم rgba(0,0,0,0.8) */
+  color: var(--light-color);
+}
+
+.dark-mode .site-header a,
+.dark-mode .site-header svg {
+  color: var(--light-color) !important;
+}
+
+.dark-mode .site-header a:hover,
+.dark-mode .site-header svg:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* === الشكل الأساسي للنافبار === */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  max-height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.nav-log {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--light-color);
+  white-space: nowrap;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+
+/* === تابلت (أقل من 992px) === */
+@media (max-width: 991.98px) {
+ 
+
+  .nav-log {
+    font-size: 1rem;
+    margin-right: 6px;
+  }
+
+  .switch {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+
+/* === موبايل (أقل من 768px) === */
+@media (max-width: 767.98px) {
+  .nav-logo img {
+    max-height: 60px;
+    margin: 0px !important;
+  }
+
+  .nav-log {
+    font-size: 0.8rem !important;
+    width: fit-content;
+    margin: 1px !important;
+   
+    
+  }
+
+  .switch {
+   width: 70px !important;
+   padding-left: 5px !important;
+ 
+  }
+}
+
+
+
+
+
+.navbar {
+
+  position: fixed;
+  top: 20px; 
+  width: 100%;
+  z-index: 999;
+}
+
+
+.navbar-brand {
+  color: var(--main-color) !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+
+.nav_ismailia {
+  color: var(--secondary-color);
+}
+
+.login-btn {
+  background-color: var(--secondary-color);
+  color: #fff !important;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: .8rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #ff9500;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .login-btn {
+    font-size: 14px;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-mobile {
+    font-size: 16px !important;
+  }
+}
+
+/*  dropdown  style */
+.custom-dropdown {
+  background-color: var(--light-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  min-width: 200px;
+}
+
+/* dropdown item */
+.custom-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: 0.3s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: var(--main-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+.custom-dropdown .dropdown-divider {
+  margin: 0.3rem 0;
+  border-top: 1px solid var(--main-color);
+}
+
+
+
+
+
+/* From Uiverse.io by rishichawda */
+/* The switch - the box around the slider */
+#theme-toggle-button {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 7em;
+  cursor: pointer;
+}
+
+/* Hide default HTML checkbox */
+#toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#container,
+#patches,
+#stars,
+#button,
+#sun,
+#moon,
+#cloud {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.25s;
+}
+
+/* night sky background */
+#toggle:checked+svg #container {
+  fill: #2b4360;
+}
+
+/* move button to right when checked */
+#toggle:checked+svg #button {
+  transform: translate(28px, 2.333px);
+}
+
+/* show/hide sun and moon based on checkbox state */
+#sun {
+  opacity: 1;
+}
+
+#toggle:checked+svg #sun {
+  opacity: 0;
+}
+
+#moon {
+  opacity: 0;
+}
+
+#toggle:checked+svg #moon {
+  opacity: 1;
+}
+
+/* show or hide background items on checkbox state */
+#cloud {
+  opacity: 1;
+}
+
+#toggle:checked+svg #cloud {
+  opacity: 0;
+}
+
+#stars {
+  opacity: 0;
+}
+
+#toggle:checked+svg #stars {
+  opacity: 1;
+}
+
+.navbar-nav .nav-item {
+  padding-right: 4rem;
+}
+
+.dark-mode {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode a {
+  color: #4fc3f7 !important;
+}
+
+
+body.dark-mode {
+  background-color: #222;
+  color: #f1f1f1;
+}
+
+body.dark-mode .navbar {
+  background-color: #333 !important;
+}
+
+body.dark-mode .nav-link {
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #444;
+  border-color: #666;
+  color: #f9f9f9;
+}
+
+/* ====== END: Navbar ====== */
+
+
+
+/* ====== Start: Footer ====== */
+
+.main-footer {
+  background: linear-gradient(rgba(1, 73, 118, 0.6), rgba(1, 73, 118, 0.6)), url("/Images/footer.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--light-color);
+}
+
+
+.dark-mode .main-footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Images/footer.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-link {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-icon-link:hover,
+.footer-icon:hover {
+  color: var(--secondary-color)!important;
+    text-decoration: none;
+}
+
+.footer-icon {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+.footer-icon-link {
+  font-size: 1.5rem;
+  color: var(--light-color);
+  transition: 0.3s;
+}
+.dark-mode .footer-icon-link:hover,
+.dark-mode .footer-link:hover {
+  color: var(--secondary-color) ;
+}
+
+.main-footer a {
+  color: var(--light-color) !important;
+  text-decoration: none !important;
+}
+
+
+/* ====== End Footer ====== */
+
+
+/* ====== Start File Section ====== */
+
+.file-section-wrapper {
+
+  background-color: var(--background-color);
+}
+
+.section-title {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.section-description {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.spacer {
+  height: 140px; /* Used instead of multiple <br> tags */
+}
+
+/* ====== End File Section ====== */
+
+
+
+/* ====== Start File Card ====== */
+
+.file-card-wrapper {
+  overflow: hidden;
+}
+
+.file-card-motion {
+  width: 100%;
+  max-width: 350px;
+}
+
+.file-card {
+  width: 100%;
+  border: 3px solid var(--secondary-color);
+  border-radius: 20px;
+  background-color: var(--card-color);
+  font-weight: 600;
+  
+  font-size: 1rem;
+  
+}
+
+.file-card-title {
+  color: var(--main-color);
+  font-weight: 600;
+  
+  font-size: 1.5rem;
+}
+
+.file-card-image {
+  border-radius: 15px;
+  border: 2px solid var(--main-color);
+  margin-bottom: 15px;
+  width: 100%;
+  height: 300px;
+}
+
+.file-card-description {
+  color: var(--text-color);
+}
+
+/* ====== End File Card ====== */
+
+
+
+
+/* ====== Start Light Line  ====== */
+
+.scroll-line {
+  position: fixed;
+  top: 70px; /* يبدأ بعد الـ Nav */
+  left: 50%;
+  bottom: 1000px; /* ينتهي قبل الـ Footer */
+  transform: translateX(-50%);
+  width: 5px;
+  background: linear-gradient(to bottom, #014976, #037bb5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(1, 73, 118, 0.6);
+  z-index: -1;
+  transition: height 0.2s ease-out;
+}
+.dark-mode .scroll-line {
+  background: linear-gradient(to bottom, #FBAE42, #d98c00);
+  box-shadow: 0 0 10px rgba(251, 174, 66, 0.5); /* ظل متناسق مع البرتقالي */
+}
+
+
+/* ====== End Light Line  ====== */
+/* ======  ====== */
+
