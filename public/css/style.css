@@ -5,7 +5,7 @@
   --secondary-color: #FBAE42;
   --card-color: hsl(41, 100%, 97%);
   --body-color: #fff9f1;
-  --text-color: #333333;
+  --text-color: #0f0e0e;
   --light-color: #f8f9fa;
 }
 
@@ -54,6 +54,7 @@ body {
   margin: 0;
   padding: 0;
   direction: rtl;
+  text-align: right;
   background-color: var(--body-color);
   font-family: 'Calibri RPT', 'Cairo', sans-serif !important;
 }
@@ -526,9 +527,9 @@ body.dark-mode .dropdown-menu {
 
 .scroll-line {
   position: fixed;
-  top: 70px; /* يبدأ بعد الـ Nav */
+  top: 70px; 
   left: 50%;
-  bottom: 1000px; /* ينتهي قبل الـ Footer */
+  bottom: 1000px; 
   transform: translateX(-50%);
   width: 5px;
   background: linear-gradient(to bottom, #014976, #037bb5);
@@ -539,10 +540,40 @@ body.dark-mode .dropdown-menu {
 }
 .dark-mode .scroll-line {
   background: linear-gradient(to bottom, #FBAE42, #d98c00);
-  box-shadow: 0 0 10px rgba(251, 174, 66, 0.5); /* ظل متناسق مع البرتقالي */
+  box-shadow: 0 0 10px rgba(251, 174, 66, 0.5); 
 }
 
 
 /* ====== End Light Line  ====== */
-/* ======  ====== */
 
+
+/* ====== Start Home Bage ====== */
+.Hellow-Home {
+  color: var(--main-color);
+  transition: color 0.4s ease;
+}
+
+.dark-mode .Hellow-Home {
+  color: var(--secondary-color);
+}
+
+.Hellow-in-Home {
+  color: var(--secondary-color);
+  font-weight: bold;
+  transition: color 0.4s ease;
+}
+
+.dark-mode .Hellow-in-Home {
+  color: var(--main-color)!important;
+}
+
+.Home-text {
+  color: var(--text-color) !important;
+  transition: color 0.4s ease;
+}
+
+
+
+
+
+/* ====== End Home Bage ====== */
