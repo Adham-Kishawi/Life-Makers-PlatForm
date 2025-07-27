@@ -8,6 +8,8 @@ import { motion } from 'framer-motion';
 import { FaHandsHelping } from 'react-icons/fa';
 import HomeAboutSection from './HomeAboutSection';
 import HomeFilesSection from './HomeFilesSection';
+import HomeGallerySection from './HomeGallerySection';
+import HomeJoinUsSection from './HomeJoinUsSection';
 
 const Home = () => {
   return (
@@ -40,6 +42,9 @@ const Home = () => {
        <div className="spacer"></div>
        <HomeFilesSection/>
         <div className="spacer"></div>
+        <HomeGallerySection/>
+        <div className="spacer"></div>
+        <HomeJoinUsSection/>
 
       <Footer />
     </>

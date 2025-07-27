@@ -1,5 +1,7 @@
 import * as React from "react";
 import App from "./App"
+import About from "./About/AllAbout"
+
 import { createRoot } from "react-dom/client";
 import {
   createBrowserRouter,
@@ -18,6 +20,18 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/",
+    element: (
+      <App/>
+    ),
+  },
+  {
+    path: "About",
+    element: (
+      <About/>
+    ),
+  },
+  {
     path: "login",
     element: (
         <Login></Login>
@@ -26,7 +40,7 @@ const router = createBrowserRouter([
  {
   path: "Attraction",
   element: <Attraction />
-}
+},
 
 ]);
 

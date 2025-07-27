@@ -40,12 +40,12 @@ function Nav() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ">
           <li className="nav-item active">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to="/">
               الرئيسية <span className="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">عن المؤسسة</a>
+            <Link className="nav-link" to="/About">عن المؤسسة</Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">تواصل معنا</a>

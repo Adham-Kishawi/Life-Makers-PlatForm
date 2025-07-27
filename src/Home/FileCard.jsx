@@ -15,7 +15,7 @@ const FileCard = ({ title, Icon, path, index }) => {
           delay: index * 0.1,
         }}
         whileHover={{ scale: 1.05 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
       >
         <Icon size={36} className="home-file-icon mb-2" />
         <h5 className="home-file-title font-weight-bold m-0">{title}</h5>
