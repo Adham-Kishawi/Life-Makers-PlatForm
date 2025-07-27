@@ -7,6 +7,7 @@ import Banner from './Banner';
 import { motion } from 'framer-motion';
 import { FaHandsHelping } from 'react-icons/fa';
 import HomeAboutSection from './HomeAboutSection';
+import HomeFilesSection from './HomeFilesSection';
 
 const Home = () => {
   return (
@@ -37,6 +38,8 @@ const Home = () => {
       <div className="spacer"></div>
       <HomeAboutSection/>
        <div className="spacer"></div>
+       <HomeFilesSection/>
+        <div className="spacer"></div>
 
       <Footer />
     </>

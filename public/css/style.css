@@ -3,7 +3,7 @@
 :root {
   --main-color: #014976;
   --secondary-color: #FBAE42;
-  --card-color: hsl(41, 100%, 97%);
+  --card-color: hsl(240, 33%, 98%);
   --body-color: #fff9f1;
   --text-color: #0f0e0e;
   --light-color: #f8f9fa;
@@ -572,6 +572,62 @@ body.dark-mode .dropdown-menu {
   transition: color 0.4s ease;
 }
 
+.home-about-link {
+  color: var(--secondary-color);
+  font-weight: bold;
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.dark-mode .home-about-link {
+  color: var(--main-color)!important;
+}
+.dark-mode .home-about-link:hover {
+   color: var(--secondary-color) !important;
+}
+
+.home-about-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+
+
+.home-file-card {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.home-file-card:hover {
+  box-shadow: 0 0 20px var(--main-color);
+  border-color: var(--main-color);
+}
+
+.dark-mode .home-file-card:hover {
+  box-shadow: 0 0 20px var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.home-file-icon {
+  color: var(--main-color);
+  transition: color 0.3s ease;
+}
+
+.dark-mode .home-file-icon {
+  color: var(--secondary-color);
+}
+
+.home-file-title {
+  color: var(--main-color) !important;
+  font-weight: bold;
+}
+.dark-mode .home-file-title {
+  color: var(--secondary-color) !important;
+  
+}
 
 
 

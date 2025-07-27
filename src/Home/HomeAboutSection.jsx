@@ -33,12 +33,12 @@ const HomeAboutSection = () => {
             <br />
             لو بتدور على مكان تسيب فيه بصمتك...  
              <br />
-   <Link
+<Link
   to="/login"
-  className="Hellow-in-Home font-weight-bold"
+  className="home-about-link"
   style={{ textDecoration: 'none' }}
 >
-  فأحنا مستنيينك تكون معانا ❤️
+  فإحنا مستنيينك تكون معانا! ❤️
 </Link>
 
 
@@ -46,7 +46,6 @@ const HomeAboutSection = () => {
           </p>
         </div>
 
-        {/* ✅ الصورة على الشمال */}
         <div className="col-md-5 order-1 order-md-2 text-center mb-4 mb-md-0">
           <img
             src="Images/home.jpg"

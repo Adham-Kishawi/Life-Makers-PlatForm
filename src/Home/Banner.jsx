@@ -11,13 +11,13 @@ function Banner() {
   </ol>
   <div className="carousel-inner">
     <div className="carousel-item active">
-      <img src="Images/Banner/Large (1).jpg" className="d-block w-100" alt="..." />
+      <img src="Images/Banner/Small (1).jpg" className="d-block w-100" alt="..." />
     </div>
     <div className="carousel-item">
-      <img src="Images/Banner/Large (2).jpg" className="d-block w-100" alt="..." />
+      <img src="Images/Banner/Small (3).jpg" className="d-block w-100" alt="..." />
     </div>
     <div className="carousel-item">
-      <img src="Images/Banner/Large (3).jpg" className="d-block w-100" alt="..." />
+      <img src="Images/Banner/Small (2).jpg" className="d-block w-100" alt="..." />
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
