@@ -46,7 +46,7 @@ function AboutPrograms() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="about-hero-title mb-3">مجالات عمل المؤسسة</h2>
           <p className="about-programs-text">
@@ -63,7 +63,7 @@ function AboutPrograms() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <div className="join-card p-4 h-100 text-center rounded">
                 <div className="mb-3">{prog.icon}</div>

@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Login from "./Login/Login";
 import Attraction from "./Files/Attraction";
+import AllContact from "./Contact/AllContact";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,13 @@ const router = createBrowserRouter([
       <About/>
     ),
   },
+  {
+    path: "Contact",
+    element: (
+      <AllContact/>
+    ),
+  },
+
   {
     path: "login",
     element: (

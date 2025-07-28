@@ -35,7 +35,7 @@ function AboutImpact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="about-impact-title mb-3">أثرنا المجتمعي</h2>
           <p className="about-impact-text">
@@ -52,7 +52,7 @@ function AboutImpact() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <div className="join-card text-center p-4 h-100">
                 <div className="mb-2">{item.icon}</div>

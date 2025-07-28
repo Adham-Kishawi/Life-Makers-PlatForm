@@ -9,7 +9,7 @@ export default function AboutHero() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h1 className="about-hero-title mb-4">صُنّاع الحياة مصر</h1>
           <p className="about-hero-subtitle mb-4">

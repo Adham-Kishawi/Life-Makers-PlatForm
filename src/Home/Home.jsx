@@ -17,10 +17,7 @@ const Home = () => {
       <Header />
       <Nav />
 
-      <br />
-      <br />
-      <br />
-      <br />
+     <div className="spacer"></div>
 
       <motion.div
         className="text-center py-4"

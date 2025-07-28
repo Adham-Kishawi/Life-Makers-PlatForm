@@ -12,7 +12,7 @@ function AboutCTA() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
         >
           <h2 className="cta-title mb-3">مستني إيه؟</h2>
           <p className="cta-subtitle mb-4">

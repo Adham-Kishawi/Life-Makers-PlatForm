@@ -48,7 +48,7 @@ function Nav() {
             <Link className="nav-link" to="/About">عن المؤسسة</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">تواصل معنا</a>
+            <Link className="nav-link" to="/Contact">تواصل معنا</Link>
           </li>
 
           <li className="nav-item dropdown">

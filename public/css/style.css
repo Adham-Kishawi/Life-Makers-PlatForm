@@ -907,4 +907,56 @@ body.dark-mode .dropdown-menu {
 }
 
 
-  /* ====== End  About Bage====== */
+/* ====== End  About Bage====== */
+
+
+
+
+/* ====== Strat  Contact Bage====== */
+
+
+.contact-hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  max-width: 750px;
+}
+.social-icon-box {
+  font-size: 2rem;
+  margin: 0 0.75rem;
+  color: var(--main-color) !important;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.5rem 0.7rem;
+  border-radius: 50% !important;
+  background-color: var(--card-color) !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.social-icon-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px var(--main-color ) !important;
+  color: var(--light-color) !important;
+  background-color: var(--main-color) !important;
+}
+
+.dark-mode .social-icon-box {
+  color: var(--secondary-color) !important;
+  background-color: var(--card-color) !important;
+}
+
+.dark-mode .social-icon-box:hover {
+  box-shadow: 0 0 15px var(--secondary-color) !important;
+  background-color: var(--secondary-color) !important;
+  color: var(--light-color) !important;
+}
+
+.map-responsive iframe {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  height: 400px !important;
+}
+
+
+
+
+/* ====== End  Contact Bage====== */
