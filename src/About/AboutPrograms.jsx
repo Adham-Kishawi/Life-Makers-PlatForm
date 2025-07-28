@@ -40,7 +40,7 @@ function AboutPrograms() {
   return (
     <section className="about-programs py-5">
       <div className="container">
-        {/* العنوان */}
+        
         <motion.div
           className="text-center mb-5"
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ function AboutPrograms() {
           </p>
         </motion.div>
 
-        {/* الكروت */}
+        
         <div className="row">
           {programs.map((prog, index) => (
             <motion.div
