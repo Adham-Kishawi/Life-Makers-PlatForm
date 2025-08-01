@@ -1,6 +1,6 @@
 import React from 'react';
 import FileSection from './FileSection';
-import { FaAccessibleIcon } from 'react-icons/fa'
+import { GiThreeFriends } from 'react-icons/fa'
 
 
 const Beast_friend = () => {

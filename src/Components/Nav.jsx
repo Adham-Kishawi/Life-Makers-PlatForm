@@ -63,7 +63,7 @@ function Nav() {
             </a>
             <div className="dropdown-menu custom-dropdown">
               <a className="dropdown-item" href="#"><i className="fas fa-file-alt mr-2"></i> الدعم و التواصل</a>
-              <Link className="dropdown-item" to="Attraction"><i className="fas fa-chart-line mr-2"></i> الجذب</Link>
+              <Link className="dropdown-item" to="/Attraction"><i className="fas fa-chart-line mr-2"></i> الجذب</Link>
               <a className="dropdown-item" href="#"><i className="fas fa-chart-line mr-2"></i> هنوصلك</a>
               <a className="dropdown-item" href="#"><i className="fas fa-chart-line mr-2"></i> الميديا</a>
               <a className="dropdown-item" href="#"><i className="fas fa-chart-line mr-2"></i> أنشطة الاطفال</a>

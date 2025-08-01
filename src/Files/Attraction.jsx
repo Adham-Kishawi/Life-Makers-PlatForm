@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import FileSection from './FileSection';
 import { FaUsers } from 'react-icons/fa';
 
 const Attraction = () => {
   const items = [
- 
+
     {
       title: 'عيلة الجذب',
        image: "Images/Attraction/Family.jpg",

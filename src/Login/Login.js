@@ -1,30 +1,15 @@
 import React from "react";
-import AuthCard from "./AuthCard";
-import "./auth.css";
+// import AuthCard from "./AuthCard";
+import AuthCardold from "./AuthCardold";
+import "./authold.css";
 
 function Login() {
   return (
     <div>
-      <AuthCard />
+      <AuthCardold />
       <br/>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+   
     </div>
       
   );
