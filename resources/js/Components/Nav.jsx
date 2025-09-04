@@ -6,6 +6,7 @@ function Nav() {
   const { committee } = usePage().props
 
   return (
+    
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow nav-logo">
 
       {/* <a className="navbar-brand brand-mobile" href="#">
