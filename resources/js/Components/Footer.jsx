@@ -14,7 +14,7 @@ function Footer() {
       <div className="container">
         <div className="row">
 
-        
+
           <div className="col-md-4 mb-4">
             <img src="/Images/logowhite.png" alt="logo" className="img-fluid mb-3" />
             <p className="text-center">
@@ -24,24 +24,32 @@ function Footer() {
             </p>
           </div>
 
-        
+
           <div className="col-md-4 mb-4 text-center">
             <h5 className="font-weight-bold mb-4">التبرع</h5>
 
             <div className="d-flex flex-column align-items-center mb-3">
               <FaHandHoldingHeart className="footer-icon mb-2" />
-              <a href="#" className="footer-link">التبرع عبر الموقع</a>
+              <a href="https://donate.lifemakers.org/Home/indexAr_Gov/15" target="_blank" rel="noreferrer" className="footer-link">التبرع عبر الموقع</a>
             </div>
 
             <div className="d-flex flex-column align-items-center mb-3">
               <FaHandHoldingHeart className="footer-icon mb-2" />
-              <a href="#" className="footer-link">التبرع البنكي</a>
+              <a href="https://lifemakers.org/%d8%aa%d8%a8%d8%b1%d8%b9-%d8%b9%d8%a8%d8%b1-%d8%a7%d9%84%d8%a8%d9%86%d9%88%d9%83/" target="_blank" rel="noreferrer" className="footer-link">التبرع البنكي</a>
             </div>
 
-            <div className="d-flex flex-column align-items-center">
-              <FaHandHoldingHeart className="footer-icon mb-2" />
-              <a href="#" className="footer-link">تبرع عيني</a>
-            </div>
+         <div className="d-flex flex-column align-items-center">
+  <FaHandHoldingHeart className="footer-icon mb-2" />
+  <a
+    href="https://wa.me/2010107092613"
+    className="footer-link"
+    target="_blank"
+    rel="noreferrer"
+  >
+    تبرع عيني
+  </a>
+</div>
+
           </div>
 
           {/* تواصل معنا */}
@@ -84,7 +92,7 @@ function Footer() {
           </a>
         </div>
 
-  
+
         <div className="text-center mt-4 pt-3 border-top border-light">
           <p className="mb-0">
             &copy; {new Date().getFullYear()} صناع الحياة الإسماعيلية - جميع الحقوق محفوظة

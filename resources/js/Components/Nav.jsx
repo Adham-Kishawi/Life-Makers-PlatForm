@@ -3,33 +3,32 @@ import Switch from "./Switch";
 import { Link, usePage } from "@inertiajs/react";
 
 function Nav() {
-  const { committee } = usePage().props
+  const { committee } = usePage().props;
 
   return (
-    
-    <nav className="navbar navbar-expand-lg navbar-light bg-light shadow nav-logo">
-
-      {/* <a className="navbar-brand brand-mobile" href="#">
-        صناع الحياة
-        <br />
-        <span className="nav_ismailia">الإسماعيلية</span>
-      </a> */}
-      <Link className=" brand-mobile mr-1" href="/">
-        <img src="/Images/logo.png" alt="ll" style={{ width: "120px", height: "auto", }} />
+    <nav className="navbar navbar-expand-lg navbar-expand-md navbar-light bg-light shadow">
+      {/* Logo */}
+      <Link className="navbar-brand brand-mobile nav-logo" href="/">
+        <img
+          src="/Images/logo.png"
+          alt="logo"
+          style={{ width: "120px", height: "auto" }}
+        />
       </Link>
 
 
-      <li className="nav-item  mr-5" style={{ listStyle: "none" }}>
-        <Link className="nav-link login-btn d-lg-none nav-log" href="/login" style={{ width: "100%" }}>  خليك صنعاوي </Link>
-      </li>
-      <div className="mr-auto  d-lg-none Switch-mobile">
-        <Switch />
+      <div className="d-flex align-items-center order-lg-3 nav-actions">
+        <Link className="btn login-btn" href="/Login">
+          خليك صنعاوي
+        </Link>
+        <div className="switch-wrapper ml-2">
+          <Switch />
+        </div>
       </div>
 
 
-
       <button
-        className="navbar-toggler"
+        className="navbar-toggler order-lg-2"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -40,21 +39,29 @@ function Nav() {
         <span className="navbar-toggler-icon" />
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ">
+
+      <div
+        className="collapse navbar-collapse justify-content-center order-lg-1"
+        id="navbarSupportedContent"
+      >
+        <ul className="navbar-nav text-center">
           <li className="nav-item active">
             <Link className="nav-link" href="/">
               الرئيسية <span className="sr-only">(current)</span>
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" href="/About">عن المؤسسة</Link>
+            <Link className="nav-link" href="/About">
+              عن المؤسسة
+            </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" href="/Contact">تواصل معنا</Link>
+            <Link className="nav-link" href="/Contact">
+              تواصل معنا
+            </Link>
           </li>
 
-          {committee ?
+          {committee ? (
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -65,23 +72,20 @@ function Nav() {
               >
                 ملفاتنا
               </a>
-              <div className="dropdown-menu custom-dropdown">
-                {committee.map((item, index) =>
-                  <Link key={index} className="dropdown-item" href={`/committee/${item.name}`}>{item.name}</Link>
-                )}
+              <div className="dropdown-menu custom-dropdown text-right">
+                {committee.map((item, index) => (
+                  <Link
+                    key={index}
+                    className="dropdown-item"
+                    href={`/committee/${item.name}`}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </li>
-            : null}
-
-          <li className="nav-item">
-            <Link className="nav-link login-btn d-none d-lg-block ml-2" href="/Login">خليك صنعاوي</Link>
-          </li>
+          ) : null}
         </ul>
-
-
-        <div className="d-none d-lg-block ml-2">
-          <Switch />
-        </div>
       </div>
     </nav>
   );
