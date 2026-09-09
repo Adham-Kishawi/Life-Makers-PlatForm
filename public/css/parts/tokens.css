@@ -1,0 +1,40 @@
+/* =========================================================
+   tokens.css — Design tokens
+   Light + Dark mode CSS custom properties
+   Loaded first; everything else derives from these vars.
+   ========================================================= */
+
+/* Light Mode */
+:root {
+  --main-color: #014976;
+  --main-hover: #013758;
+  --secondary-color: #FBAE42;
+  --secondary-hover: #e59b32;
+  --card-color: #ffffff;
+  --card-border: #e2e8f0;
+  --body-color: #f8fafc;
+  --text-color: #0f172a;
+  --text-muted: #64748b;
+  --light-color: #f8f9fa;
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(1, 73, 118, 0.1);
+  --glass-shadow: 0 10px 30px -5px rgba(1, 73, 118, 0.08);
+}
+
+/* Dark Mode */
+.dark-mode, html.dark-mode, body.dark-mode {
+  --main-color: #38bdf8;
+  --main-hover: #7dd3fc;
+  --secondary-color: #FBAE42;
+  --secondary-hover: #fbbf24;
+  --body-color: #0b1120;
+  --card-color: #111827;
+  --card-border: #1f2937;
+  --text-color: #f8fafc;
+  --text-muted: #94a3b8;
+  --light-color: #f1f5f9;
+  --glass-bg: rgba(11, 17, 32, 0.92);
+  --glass-border: rgba(56, 189, 248, 0.18);
+  --glass-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+  --background-color: #0b1120;
+}

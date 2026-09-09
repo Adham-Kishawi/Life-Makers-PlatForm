@@ -1,0 +1,56 @@
+/* =========================================================
+   forms.css — Form controls, focus states, RTL/LTR edges
+   (One unified radius rule — replaces the old duplicate
+    blocks that appeared twice in style.css)
+   ========================================================= */
+
+.form-control,
+.form-select,
+.input-group-text,
+select,
+input,
+textarea {
+  border-radius: 1.1rem !important;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--main-color) !important;
+  box-shadow: 0 0 0 0.2rem rgba(1, 73, 118, 0.18) !important;
+}
+
+/* Input group smooth edge connections */
+html[dir="rtl"] .input-group > :first-child:not(:last-child) {
+  border-top-right-radius: 1.1rem !important;
+  border-bottom-right-radius: 1.1rem !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+html[dir="rtl"] .input-group > :last-child:not(:first-child) {
+  border-top-left-radius: 1.1rem !important;
+  border-bottom-left-radius: 1.1rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+html[dir="rtl"] .input-group > :not(:first-child):not(:last-child) {
+  border-radius: 0 !important;
+}
+
+html[dir="ltr"] .input-group > :first-child:not(:last-child) {
+  border-top-left-radius: 1.1rem !important;
+  border-bottom-left-radius: 1.1rem !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+html[dir="ltr"] .input-group > :last-child:not(:first-child) {
+  border-top-right-radius: 1.1rem !important;
+  border-bottom-right-radius: 1.1rem !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+html[dir="ltr"] .input-group > :not(:first-child):not(:last-child) {
+  border-radius: 0 !important;
+}

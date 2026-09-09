@@ -1,0 +1,109 @@
+/* =========================================================
+   footer.css — Footer high-contrast system (incl. dark mode)
+   ========================================================= */
+
+.main-footer {
+  background: linear-gradient(180deg, #013758 0%, #01243a 100%) !important;
+  color: #f8fafc !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-mode .main-footer,
+html.dark-mode .main-footer,
+body.dark-mode .main-footer {
+  background: linear-gradient(180deg, #0b1120 0%, #020617 100%) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #f8fafc !important;
+}
+
+.main-footer h5,
+.main-footer h6,
+.dark-mode .main-footer h5,
+.dark-mode .main-footer h6 {
+  color: #FBAE42 !important;
+  font-weight: 700 !important;
+}
+
+.main-footer a,
+.main-footer a *,
+.main-footer a:visited,
+.main-footer .footer-link,
+.main-footer .footer-nav-link,
+.main-footer .footer-nav-link *,
+.dark-mode .main-footer a,
+.dark-mode .main-footer a *,
+.dark-mode .main-footer a:visited,
+.dark-mode .main-footer .footer-link,
+.dark-mode .main-footer .footer-nav-link,
+.dark-mode .main-footer .footer-nav-link * {
+  color: #f1f5f9 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+.main-footer a:hover,
+.main-footer a:hover *,
+.main-footer .footer-link:hover,
+.main-footer .footer-nav-link:hover,
+.main-footer .footer-nav-link:hover *,
+.dark-mode .main-footer a:hover,
+.dark-mode .main-footer a:hover *,
+.dark-mode .main-footer .footer-link:hover,
+.dark-mode .main-footer .footer-nav-link:hover,
+.dark-mode .main-footer .footer-nav-link:hover * {
+  color: #FBAE42 !important;
+}
+
+.main-footer .footer-icon {
+  color: #FBAE42 !important;
+  font-size: 1.2rem;
+}
+
+.main-footer .footer-icon-link {
+  font-size: 1.5rem;
+  color: #f1f5f9 !important;
+  transition: 0.3s;
+}
+
+.main-footer .footer-icon-link:hover,
+.dark-mode .main-footer .footer-icon-link:hover {
+  color: #FBAE42 !important;
+}
+
+.main-footer p,
+.main-footer span,
+.main-footer li,
+.main-footer strong,
+.dark-mode .main-footer p,
+.dark-mode .main-footer span,
+.dark-mode .main-footer li,
+.dark-mode .main-footer strong {
+  color: #f1f5f9 !important;
+}
+
+.main-footer .social-btn,
+.dark-mode .main-footer .social-btn {
+  background: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+.main-footer .social-btn svg,
+.dark-mode .main-footer .social-btn svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+.main-footer .social-btn:hover {
+  background: #FBAE42 !important;
+  color: #0f172a !important;
+  border-color: #FBAE42 !important;
+  transform: translateY(-3px) scale(1.1) !important;
+  box-shadow: 0 4px 15px rgba(251, 174, 66, 0.5) !important;
+}
+
+.main-footer .social-btn:hover svg {
+  color: #0f172a !important;
+  fill: #0f172a !important;
+}

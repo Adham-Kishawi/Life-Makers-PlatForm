@@ -12,8 +12,6 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 use Filament\Panel;
 
-use function PHPUnit\Framework\isEmpty;
-
 class User extends Authenticatable implements HasAvatar, FilamentUser
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
@@ -63,9 +61,14 @@ class User extends Authenticatable implements HasAvatar, FilamentUser
         ];
     }
 
-    public function canImpersonate()
+    public function canImpersonate(): bool
     {
-        return true;
+        return $this->hasRole('super_admin');
+    }
+
+    public function canBeImpersonated(): bool
+    {
+        return ! $this->hasRole('super_admin');
     }
 
     public function committees()

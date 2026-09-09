@@ -1,0 +1,398 @@
+/* =========================================================
+   dark-mode.css — Comprehensive unified dark mode system
+   Loaded LAST so dark overrides always win the cascade for
+   equal-specificity matches.
+   ========================================================= */
+
+.dark-mode, html.dark-mode, body.dark-mode {
+  background-color: var(--body-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Site Top Header in Dark Mode */
+.dark-mode .site-header,
+html.dark-mode .site-header,
+body.dark-mode .site-header {
+  background-color: #080e1e !important;
+  color: #94a3b8 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.dark-mode .site-header span,
+.dark-mode .site-header a,
+html.dark-mode .site-header span,
+html.dark-mode .site-header a {
+  color: #cbd5e1 !important;
+}
+
+.dark-mode .site-header svg,
+html.dark-mode .site-header svg {
+  color: #FBAE42 !important;
+}
+
+/* Navbar Volunteer CTA in Dark Mode */
+.dark-mode .volunteer-cta-nav,
+html.dark-mode .volunteer-cta-nav,
+body.dark-mode .volunteer-cta-nav {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3) !important;
+  border: 1px solid rgba(251, 174, 66, 0.6) !important;
+  color: #ffffff !important;
+}
+
+/* Headings in Dark Mode */
+.dark-mode h1, .dark-mode h2, .dark-mode h3,
+.dark-mode h4, .dark-mode h5, .dark-mode h6,
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3,
+html.dark-mode h4, html.dark-mode h5, html.dark-mode h6,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3,
+body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
+  color: #f8fafc;
+}
+
+/* Text Overrides in Dark Mode */
+.dark-mode .text-dark:not(.btn-glow-amber):not(.btn-warning):not(.badge.bg-warning):not(.badge-warning),
+html.dark-mode .text-dark:not(.btn-glow-amber):not(.btn-warning):not(.badge.bg-warning):not(.badge-warning),
+body.dark-mode .text-dark:not(.btn-glow-amber):not(.btn-warning):not(.badge.bg-warning):not(.badge-warning) {
+  color: #f8fafc !important;
+}
+
+/* Keep text pitch dark inside yellow/amber badges and buttons */
+.dark-mode .btn-warning,
+.dark-mode .btn-glow-amber,
+.dark-mode .badge.bg-warning,
+.dark-mode .bg-warning,
+.dark-mode .badge-warning,
+html.dark-mode .btn-warning,
+html.dark-mode .btn-glow-amber,
+html.dark-mode .badge.bg-warning,
+html.dark-mode .bg-warning,
+html.dark-mode .badge-warning,
+body.dark-mode .btn-warning,
+body.dark-mode .btn-glow-amber,
+body.dark-mode .badge.bg-warning,
+body.dark-mode .bg-warning,
+body.dark-mode .badge-warning {
+  color: #000000 !important;
+}
+
+/* Form labels and small headings */
+.dark-mode label,
+.dark-mode .form-label,
+html.dark-mode label,
+html.dark-mode .form-label,
+body.dark-mode label,
+body.dark-mode .form-label {
+  color: #e2e8f0 !important;
+}
+
+.dark-mode .text-muted,
+html.dark-mode .text-muted,
+body.dark-mode .text-muted {
+  color: #94a3b8 !important;
+}
+
+/* Fix generic links in dark mode */
+.dark-mode a:not(.btn):not(.nav-link-custom):not(.dropdown-item):not(.social-icon-box):not(.footer-link):not(.navbar-brand) {
+  color: #38bdf8;
+}
+.dark-mode a:not(.btn):not(.nav-link-custom):not(.dropdown-item):not(.social-icon-box):not(.footer-link):not(.navbar-brand):hover {
+  color: #FBAE42;
+}
+
+/* Backgrounds */
+.dark-mode .bg-white,
+html.dark-mode .bg-white,
+body.dark-mode .bg-white {
+  background-color: var(--card-color) !important;
+  color: var(--text-color) !important;
+}
+
+.dark-mode .bg-light,
+html.dark-mode .bg-light,
+body.dark-mode .bg-light {
+  background-color: #1a2333 !important;
+  color: var(--text-color) !important;
+}
+
+/* Cards & Bento */
+.dark-mode .card,
+.dark-mode .bento-card-modern,
+.dark-mode .join-card,
+.dark-mode .about-mv-card,
+.dark-mode .home-file-card,
+html.dark-mode .card,
+html.dark-mode .bento-card-modern,
+html.dark-mode .join-card,
+html.dark-mode .about-mv-card,
+html.dark-mode .home-file-card,
+body.dark-mode .card,
+body.dark-mode .bento-card-modern,
+body.dark-mode .join-card,
+body.dark-mode .about-mv-card,
+body.dark-mode .home-file-card {
+  background-color: var(--card-color) !important;
+  border-color: var(--card-border) !important;
+  color: var(--text-color) !important;
+}
+
+/* Form Controls & Inputs */
+.dark-mode .form-control,
+.dark-mode .form-select,
+.dark-mode select,
+html.dark-mode .form-control,
+html.dark-mode .form-select,
+html.dark-mode select,
+body.dark-mode .form-control,
+body.dark-mode .form-select,
+body.dark-mode select {
+  background-color: #1a2333 !important;
+  border-color: #2e3d55 !important;
+  color: #f8fafc !important;
+}
+
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus,
+.dark-mode select:focus,
+html.dark-mode .form-control:focus,
+html.dark-mode .form-select:focus,
+html.dark-mode select:focus,
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus,
+body.dark-mode select:focus {
+  background-color: #1e293b !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 0.2rem rgba(56, 189, 248, 0.25) !important;
+}
+
+.dark-mode select option,
+html.dark-mode select option,
+body.dark-mode select option {
+  background-color: #1a2333 !important;
+  color: #f8fafc !important;
+}
+
+.dark-mode .form-control::placeholder,
+html.dark-mode .form-control::placeholder,
+body.dark-mode .form-control::placeholder {
+  color: #64748b !important;
+}
+
+.dark-mode .input-group-text,
+html.dark-mode .input-group-text,
+body.dark-mode .input-group-text {
+  background-color: #111827 !important;
+  border-color: #2e3d55 !important;
+  color: #94a3b8 !important;
+}
+
+/* Dropdowns */
+.dark-mode .dropdown-menu,
+.dark-mode .dropdown-menu-custom,
+html.dark-mode .dropdown-menu,
+html.dark-mode .dropdown-menu-custom,
+body.dark-mode .dropdown-menu,
+body.dark-mode .dropdown-menu-custom {
+  background-color: #111827 !important;
+  border-color: #1f2937 !important;
+  color: #f8fafc !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+.dark-mode .dropdown-item,
+.dark-mode .dropdown-item-custom,
+html.dark-mode .dropdown-item,
+html.dark-mode .dropdown-item-custom,
+body.dark-mode .dropdown-item,
+body.dark-mode .dropdown-item-custom {
+  color: #f1f5f9 !important;
+}
+
+.dark-mode .dropdown-item:hover,
+.dark-mode .dropdown-item-custom:hover,
+html.dark-mode .dropdown-item:hover,
+html.dark-mode .dropdown-item-custom:hover,
+body.dark-mode .dropdown-item:hover,
+body.dark-mode .dropdown-item-custom:hover {
+  background-color: rgba(251, 174, 66, 0.15) !important;
+  color: #FBAE42 !important;
+}
+
+/* Dividers */
+.dark-mode .border,
+.dark-mode .border-top,
+.dark-mode .border-bottom,
+.dark-mode .border-start,
+.dark-mode .border-end,
+html.dark-mode .border,
+html.dark-mode .border-top,
+html.dark-mode .border-bottom,
+html.dark-mode .border-start,
+html.dark-mode .border-end,
+body.dark-mode .border,
+body.dark-mode .border-top,
+body.dark-mode .border-bottom,
+body.dark-mode .border-start,
+body.dark-mode .border-end {
+  border-color: var(--card-border) !important;
+}
+
+/* Stepper Circle Active in Dark Mode */
+.dark-mode .auth-stepper-circle.active,
+html.dark-mode .auth-stepper-circle.active,
+body.dark-mode .auth-stepper-circle.active {
+  background: var(--main-color) !important;
+  color: #0b1120 !important;
+  font-weight: 800 !important;
+}
+
+/* Buttons in Dark Mode */
+.dark-mode .btn-glow-navy,
+html.dark-mode .btn-glow-navy,
+body.dark-mode .btn-glow-navy {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
+  border-color: rgba(56, 189, 248, 0.5) !important;
+}
+
+.dark-mode .btn-glow-navy:hover,
+html.dark-mode .btn-glow-navy:hover,
+body.dark-mode .btn-glow-navy:hover {
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%) !important;
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.55) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .btn-glow-amber,
+html.dark-mode .btn-glow-amber,
+body.dark-mode .btn-glow-amber {
+  background: linear-gradient(135deg, #FBAE42 0%, #f59e0b 100%) !important;
+  color: #000000 !important;
+  font-weight: 800 !important;
+  border-color: rgba(251, 174, 66, 0.7) !important;
+  box-shadow: 0 4px 20px rgba(251, 174, 66, 0.4) !important;
+}
+
+.dark-mode .btn-glow-ghost,
+html.dark-mode .btn-glow-ghost,
+body.dark-mode .btn-glow-ghost {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: #f1f5f9 !important;
+}
+
+.dark-mode .btn-glow-ghost:hover,
+html.dark-mode .btn-glow-ghost:hover,
+body.dark-mode .btn-glow-ghost:hover {
+  background: rgba(251, 174, 66, 0.15) !important;
+  border-color: #FBAE42 !important;
+  color: #FBAE42 !important;
+}
+
+.dark-mode .btn-outline-secondary,
+html.dark-mode .btn-outline-secondary,
+body.dark-mode .btn-outline-secondary {
+  border-color: #2e3d55 !important;
+  color: #cbd5e1 !important;
+  background-color: #111827 !important;
+}
+
+.dark-mode .btn-outline-secondary:hover,
+html.dark-mode .btn-outline-secondary:hover,
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #1e293b !important;
+  color: #ffffff !important;
+  border-color: #FBAE42 !important;
+}
+
+.dark-mode .btn-primary-custom,
+html.dark-mode .btn-primary-custom,
+body.dark-mode .btn-primary-custom {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3) !important;
+}
+
+/* Auto-Adapt Dark Ochre / Amber text to Luminous Amber */
+.dark-mode [style*="#d97706"],
+html.dark-mode [style*="#d97706"],
+body.dark-mode [style*="#d97706"],
+.dark-mode [style*="rgb(217, 119, 6)"],
+html.dark-mode [style*="rgb(217, 119, 6)"],
+body.dark-mode [style*="rgb(217, 119, 6)"],
+.dark-mode [style*="rgb(217,119,6)"],
+html.dark-mode [style*="rgb(217,119,6)"],
+body.dark-mode [style*="rgb(217,119,6)"],
+.dark-mode [style*="#b45309"],
+html.dark-mode [style*="#b45309"],
+body.dark-mode [style*="#b45309"],
+.dark-mode [style*="rgb(180, 83, 9)"],
+html.dark-mode [style*="rgb(180, 83, 9)"],
+body.dark-mode [style*="rgb(180, 83, 9)"],
+.dark-mode [style*="rgb(180,83,9)"],
+html.dark-mode [style*="rgb(180,83,9)"],
+body.dark-mode [style*="rgb(180,83,9)"] {
+  color: #fbbf24 !important;
+}
+
+/* Auto-Adapt Dark Green to Bright Emerald Mint */
+.dark-mode [style*="#059669"],
+html.dark-mode [style*="#059669"],
+body.dark-mode [style*="#059669"],
+.dark-mode [style*="rgb(5, 150, 105)"],
+html.dark-mode [style*="rgb(5, 150, 105)"],
+body.dark-mode [style*="rgb(5, 150, 105)"],
+.dark-mode [style*="rgb(5,150,105)"],
+html.dark-mode [style*="rgb(5,150,105)"],
+body.dark-mode [style*="rgb(5,150,105)"] {
+  color: #34d399 !important;
+}
+
+/* Auto-Adapt Dark Blue to Bright Sky Blue */
+.dark-mode [style*="#2563eb"],
+html.dark-mode [style*="#2563eb"],
+body.dark-mode [style*="#2563eb"],
+.dark-mode [style*="rgb(37, 99, 235)"],
+html.dark-mode [style*="rgb(37, 99, 235)"],
+body.dark-mode [style*="rgb(37, 99, 235)"],
+.dark-mode [style*="rgb(37,99,235)"],
+html.dark-mode [style*="rgb(37,99,235)"],
+body.dark-mode [style*="rgb(37,99,235)"] {
+  color: #60a5fa !important;
+}
+
+.dark-mode [style*="#014976"],
+html.dark-mode [style*="#014976"],
+body.dark-mode [style*="#014976"],
+.dark-mode [style*="rgb(1, 73, 118)"],
+html.dark-mode [style*="rgb(1, 73, 118)"],
+body.dark-mode [style*="rgb(1, 73, 118)"],
+.dark-mode [style*="rgb(1,73,118)"],
+html.dark-mode [style*="rgb(1,73,118)"],
+body.dark-mode [style*="rgb(1,73,118)"] {
+  color: #38bdf8 !important;
+}
+
+/* Auto-Adapt Navy background containers in dark mode */
+.dark-mode [style*="rgba(1, 73, 118"],
+.dark-mode [style*="rgba(1,73,118"],
+html.dark-mode [style*="rgba(1, 73, 118"],
+html.dark-mode [style*="rgba(1,73,118"],
+body.dark-mode [style*="rgba(1, 73, 118"],
+body.dark-mode [style*="rgba(1,73,118"] {
+  background: rgba(56, 189, 248, 0.1) !important;
+  border-color: rgba(56, 189, 248, 0.22) !important;
+}
+
+/* Auto-Adapt Amber background containers in dark mode */
+.dark-mode [style*="rgba(251, 174, 66"],
+.dark-mode [style*="rgba(251,174,66"],
+html.dark-mode [style*="rgba(251, 174, 66"],
+html.dark-mode [style*="rgba(251,174,66"],
+body.dark-mode [style*="rgba(251, 174, 66"],
+body.dark-mode [style*="rgba(251,174,66"] {
+  background: rgba(251, 174, 66, 0.14) !important;
+  border-color: rgba(251, 174, 66, 0.35) !important;
+}

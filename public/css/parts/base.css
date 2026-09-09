@@ -1,0 +1,45 @@
+/* =========================================================
+   base.css — Global/reset styles (RTL-first, Arabic site)
+   ========================================================= */
+
+body {
+  margin: 0;
+  padding-top: 40px;
+  direction: rtl;
+  text-align: right;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-family: 'Cairo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Sticky-footer layout wrapper */
+.footer-respons {
+  display: flex  !important;
+  flex-direction: column;
+  min-height: 100vh   !important;
+}
+
+.footer-respons .content {
+  flex: 1 !important;
+}
+
+/* Shared page section primitives */
+.section-title {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.section-description {
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+
+.spacer {
+  height: 140px; /* Used instead of multiple <br> tags */
+}

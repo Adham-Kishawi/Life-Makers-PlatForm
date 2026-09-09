@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Concerns\HasNavigationBadge;
 use Filament\Forms;
 use App\Models\User;
 use Filament\Tables;
@@ -28,21 +29,13 @@ use Filament\Forms\Components\Wizard\Step;
 
 class UserResource extends Resource
 {
+    use HasNavigationBadge;
+
     protected static ?string $model = User::class;
 
     protected static ?int $navigationSort = 1;
 
     protected static ?string $navigationIcon = 'heroicon-o-lock-closed';
-
-    public static function getNavigationBadge(): ?string
-    {
-        return static::getEloquentQuery()->count();
-    }
-    
-    public static function getNavigationBadgeColor(): ?string
-    {
-        return static::getEloquentQuery()->count() ? 'primary' : 'gray';
-    }
 
     public static function getNavigationLabel(): string
     {
@@ -132,28 +125,21 @@ class UserResource extends Resource
                 ])
                 ->relationship('centers', 'name'),
 
-            TextInput::make('password')->confirmed()->password()->rule(\Illuminate\Validation\Rules\Password::default()->min(8)->symbols()->mixedCase()->uncompromised())->revealable()->required(fn($record) => !$record),
+            TextInput::make('password')
+                ->password()
+                ->confirmed()
+                ->rule(\Illuminate\Validation\Rules\Password::default()->min(8)->symbols()->mixedCase()->uncompromised())
+                ->revealable()
+                ->required(fn($record) => !$record)
+                ->dehydrated(fn($state) => filled($state)),
 
-            TextInput::make('password_confirmation')->same('password')->password()->rule(\Illuminate\Validation\Rules\Password::default()->min(8)->symbols()->mixedCase()->uncompromised())->revealable()->required(fn($record) => !$record),
-
-
-            // Forms\Components\TextInput::make('password')
-            //     ->label(__('filament-panels::pages/auth/register.form.password.label'))
-            //     ->password()
-            //     ->revealable(filament()->arePasswordsRevealable())
-            //     ->required(fn($record) => ! $record)
-            //     ->rule(\Illuminate\Validation\Rules\Password::default()->min(8)->symbols()->mixedCase()->uncompromised())
-            //     ->dehydrated(fn($state) => filled($state))
-            //     ->dehydrateStateUsing(fn($state) => Hash::make($state))
-            //     ->same('passwordConfirmation')
-            //     ->validationAttribute(__('filament-panels::pages/auth/register.form.password.validation_attribute')),
-
-            // Forms\Components\TextInput::make('passwordConfirmation')
-            //     ->label(__('filament-panels::pages/auth/register.form.password_confirmation.label'))
-            //     ->password()
-            //     ->revealable(filament()->arePasswordsRevealable())
-            //     ->required(fn($record) => ! $record)
-            //     ->dehydrated(false)
+            TextInput::make('password_confirmation')
+                ->password()
+                ->same('password')
+                ->rule(\Illuminate\Validation\Rules\Password::default()->min(8)->symbols()->mixedCase()->uncompromised())
+                ->revealable()
+                ->required(fn($record) => !$record)
+                ->dehydrated(false),
         ]);
     }
 

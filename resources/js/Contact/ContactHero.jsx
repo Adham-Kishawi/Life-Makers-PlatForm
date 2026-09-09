@@ -1,9 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "../Context/LanguageContext";
 
-const ContactHero = () => {
+export default function ContactHero() {
+  const { t } = useLanguage();
+
   return (
-    <section className="contact-hero-section py-5">
+    <section className="contact-hero-section py-12">
       <div className="container text-center">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -11,15 +14,12 @@ const ContactHero = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: false }}
         >
-          <h2 className=" about-hero-title mb-3">تواصل معنا</h2>
-          <p className="contact-hero-subtitle mx-auto">
-            بنرحب بتواصلك معانا في صناع الحياة – الإسماعيلية.  
-            سواء كنت عايز تستفسر، تقترح، أو تنضم لينا… إحنا في خدمتك وهنرد عليك بأسرع وقت.
+          <h2 className="about-hero-title mb-4">{t("contact_hero_badge")}</h2>
+          <p className="contact-hero-subtitle mx-auto" style={{ maxWidth: "700px" }}>
+            {t("contact_hero_subtitle")}
           </p>
         </motion.div>
       </div>
     </section>
   );
-};
-
-export default ContactHero;
+}

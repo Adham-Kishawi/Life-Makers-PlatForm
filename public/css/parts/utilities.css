@@ -1,0 +1,43 @@
+/* =========================================================
+   utilities.css — Small, single-purpose helpers
+   ========================================================= */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Direction-aware text alignment for the LTR side of the app */
+html[dir="ltr"] body {
+  text-align: left;
+}
+
+html[dir="ltr"] .text-start {
+  text-align: left !important;
+}
+
+html[dir="ltr"] .text-end {
+  text-align: right !important;
+}

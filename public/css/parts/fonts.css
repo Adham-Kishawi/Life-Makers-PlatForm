@@ -1,0 +1,29 @@
+/* =========================================================
+   fonts.css — @font-face declarations
+   Local families overlaying the Google "Cairo" webfont.
+   NOTE: paths are relative to this file (public/css/parts/).
+   ========================================================= */
+
+@font-face {
+  font-family: 'Calibri RPT';
+  src: url('../../fonts/rpt-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Calibri RPT';
+  src: url('../../fonts/rpt-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('../../fonts/calibri-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('../../fonts/calibri-Bold.ttf') format('truetype');
+  font-weight: bold;
+}

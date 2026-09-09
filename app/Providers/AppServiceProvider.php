@@ -2,11 +2,7 @@
 
 namespace App\Providers;
 
-use App\Models\Committee;
-use App\Models\Event;
-use App\Models\Slider;
 use Illuminate\Support\ServiceProvider;
-use Inertia\Inertia;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,10 +19,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Inertia::share([
-            'sliders' => Slider::orderBy('order', 'asc')->get(),
-            'committee' => Committee::orderBy('order', 'asc')->get(),
-            'events' => Event::orderBy('order', 'asc')->get(),
-        ]);
+        //
     }
 }

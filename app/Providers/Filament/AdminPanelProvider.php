@@ -41,6 +41,7 @@ class AdminPanelProvider extends PanelProvider
                 FilamentBackgroundsPlugin::make()
                     ->showAttribution(false)->remember(120),
                 FilamentEnvEditorPlugin::make()
+                    ->authorize(fn () => auth()->user()?->hasRole('super_admin'))
                     ->navigationGroup('Settings')
                     ->navigationLabel('My Env')
                     ->navigationIcon('heroicon-o-cog-8-tooth')

@@ -37,7 +37,10 @@ class HandleInertiaRequests extends Middleware
     {
         return [
             ...parent::share($request),
-            //
+            'committee' => fn () => \App\Models\Committee::orderBy('order')->get(['id', 'name', 'icon']),
+            'auth' => [
+                'user' => $request->user()?->only('id', 'name', 'email', 'personal_photo'),
+            ],
         ];
     }
 }

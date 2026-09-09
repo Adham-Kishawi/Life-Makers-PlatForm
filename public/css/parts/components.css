@@ -1,0 +1,557 @@
+/* =========================================================
+   components.css — Reusable components & effect systems
+   File cards | buttons | bento | image frames | 3D + flip
+   timeline | scroll-line | universal soft-radius system
+   ========================================================= */
+
+/* ====== File Card ====== */
+.file-card-wrapper {
+  overflow: hidden;
+}
+
+.file-card-motion {
+  width: 100%;
+  max-width: 350px;
+}
+
+.file-card {
+  width: 100%;
+  border: 3px solid var(--secondary-color);
+  border-radius: 1.75rem !important;
+  background-color: var(--card-color);
+  font-weight: 600;
+  font-size: 1rem;
+  overflow: hidden !important;
+}
+
+.file-card-title {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.file-card-image {
+  border-radius: 1.5rem !important;
+  border: 2px solid var(--main-color);
+  margin-bottom: 15px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.file-card-description {
+  color: var(--text-color);
+}
+
+/* ====== Light line (scroll progress) ====== */
+.scroll-line {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  bottom: 1000px;
+  transform: translateX(-50%);
+  width: 5px;
+  background: linear-gradient(to bottom, #014976, #037bb5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(1, 73, 118, 0.6);
+  z-index: -1;
+  transition: height 0.2s ease-out;
+}
+.dark-mode .scroll-line {
+  background: linear-gradient(to bottom, #FBAE42, #d98c00);
+  box-shadow: 0 0 10px rgba(251, 174, 66, 0.5);
+}
+
+/* ====== Modern button base ====== */
+.btn-primary-custom {
+  background: linear-gradient(135deg, var(--main-color) 0%, #02639e 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease !important;
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(135deg, #013758 0%, #014976 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(1, 73, 118, 0.25) !important;
+  color: #ffffff !important;
+}
+
+.dropdown-item-custom {
+  color: var(--text-color) !important;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-item-custom:hover {
+  background: rgba(1, 73, 118, 0.08) !important;
+  color: var(--main-color) !important;
+}
+
+.dark-mode .dropdown-item-custom:hover {
+  background: rgba(251, 174, 66, 0.12) !important;
+  color: #FBAE42 !important;
+}
+
+.nav-link-mobile {
+  color: var(--text-color) !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.nav-link-mobile.active, .nav-link-mobile:hover {
+  color: var(--main-color) !important;
+  background: rgba(1, 73, 118, 0.08);
+}
+
+.dark-mode .nav-link-mobile.active, .dark-mode .nav-link-mobile:hover {
+  color: #FBAE42 !important;
+  background: rgba(251, 174, 66, 0.1);
+}
+
+.badge-committee-mobile {
+  background: rgba(1, 73, 118, 0.08);
+  color: var(--text-color);
+  font-size: 0.82rem;
+  border: 1px solid var(--card-border);
+}
+
+.committee-card-modern:hover .icon-wrapper-badge {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(251, 174, 66, 0.2) !important;
+  color: #d97706 !important;
+}
+
+.activity-card-modern:hover .activity-image-wrapper img {
+  transform: scale(1.06);
+}
+
+.activity-card-modern:hover .image-overlay-hover {
+  opacity: 1 !important;
+}
+
+/* ====== 3D Tilt, Canvas, and LTR Utilities ====== */
+.tilt-card-perspective-container {
+  perspective: 1000px;
+}
+
+.tilt-card-inner {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hero-3d-canvas-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+/* ====== 3D Flip Card ====== */
+.flip-card-perspective-wrapper {
+  perspective: 1400px;
+}
+
+.flip-card-inner {
+  transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ====== Image framing ====== */
+.image-frame-container {
+  border-radius: 1.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-frame-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(1, 73, 118, 0.4);
+}
+
+.dark-mode .image-frame-container {
+  border-color: rgba(251, 174, 66, 0.4) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(251, 174, 66, 0.15) 100%) !important;
+}
+
+/* Navigation CTA glow */
+.volunteer-cta-nav:hover {
+  box-shadow: 0 0 22px rgba(251, 174, 66, 0.6) !important;
+  border-color: #FBAE42 !important;
+}
+
+/* ====== Modern button system (gradient glow & shimmer) ====== */
+.btn-glow-amber {
+  background: linear-gradient(135deg, #FBAE42 0%, #f59e0b 100%) !important;
+  color: #0f172a !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(251, 174, 66, 0.4) !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 18px rgba(251, 174, 66, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+.btn-glow-amber:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(251, 174, 66, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.6) !important;
+  color: #000000 !important;
+}
+
+.btn-glow-amber:active {
+  transform: translateY(1px) scale(0.98) !important;
+}
+
+.btn-glow-navy {
+  background: linear-gradient(135deg, #014976 0%, #013758 100%) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(1, 73, 118, 0.5) !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 18px rgba(1, 73, 118, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+.btn-glow-navy:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(1, 73, 118, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.btn-glow-navy:active {
+  transform: translateY(1px) scale(0.98) !important;
+}
+
+.btn-glow-ghost {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(8px) !important;
+  color: inherit !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 9999px !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-glow-ghost:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: #FBAE42 !important;
+  color: #FBAE42 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Shimmer sweep animation */
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  transition: all 0.75s ease;
+  pointer-events: none;
+}
+
+.btn-shimmer:hover::after {
+  left: 130%;
+}
+
+/* ====== Modern bento card system (28px radius) ====== */
+.bento-card-modern {
+  border-radius: 1.75rem !important; /* 28px soft organic curve */
+  background: var(--card-color) !important;
+  border: 1px solid var(--card-border) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05) !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.bento-card-modern:hover {
+  transform: translateY(-6px) !important;
+  border-color: rgba(251, 174, 66, 0.5) !important;
+  box-shadow: 0 20px 40px -10px rgba(1, 73, 118, 0.15), 0 0 20px rgba(251, 174, 66, 0.2) !important;
+}
+
+.dark-mode .bento-card-modern:hover {
+  border-color: rgba(251, 174, 66, 0.45) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6), 0 0 22px rgba(251, 174, 66, 0.25) !important;
+}
+
+/* Floating badge chip */
+.floating-chip {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+html[dir="ltr"] .floating-chip {
+  right: auto;
+  left: 0.85rem;
+}
+
+/* ====== Modern non-square image card & framing ====== */
+.modern-image-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 1.75rem !important; /* 28px organic curve */
+  overflow: hidden !important;
+  background: #0f172a;
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.modern-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.75rem !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modern-image-frame:hover img {
+  transform: scale(1.06);
+}
+
+.modern-image-frame .image-vignette-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 45%, rgba(1, 36, 58, 0.82) 100%);
+  opacity: 0.85;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.modern-image-frame:hover .image-vignette-overlay {
+  opacity: 0.95;
+}
+
+/* ====== Interactive zigzag timeline (committees & activities) ====== */
+.timeline-wrapper {
+  position: relative;
+  padding: 2rem 0;
+}
+
+/* Center timeline track */
+.timeline-track {
+  position: absolute;
+  top: 10px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background: rgba(1, 73, 118, 0.12);
+  border-radius: 999px;
+  z-index: 1;
+}
+
+.dark-mode .timeline-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dynamic glowing progress bar */
+.timeline-progress {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background: linear-gradient(to bottom, #FBAE42 0%, #014976 100%);
+  box-shadow: 0 0 14px rgba(251, 174, 66, 0.65);
+  border-radius: 999px;
+  z-index: 2;
+  transition: height 0.1s linear;
+}
+
+.dark-mode .timeline-progress {
+  background: linear-gradient(to bottom, #FBAE42 0%, #eab308 100%);
+  box-shadow: 0 0 16px rgba(251, 174, 66, 0.8);
+}
+
+/* Timeline node dot */
+.timeline-node-dot {
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--card-color);
+  border: 2px solid #FBAE42;
+  box-shadow: 0 0 16px rgba(251, 174, 66, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--main-color);
+  z-index: 6;
+  transition: all 0.35s ease;
+}
+
+.dark-mode .timeline-node-dot {
+  color: #FBAE42;
+  background: #0f172a;
+}
+
+.timeline-row:hover .timeline-node-dot {
+  transform: translate(-50%, -50%) scale(1.12);
+  box-shadow: 0 0 22px rgba(251, 174, 66, 0.7);
+  border-color: #f59e0b;
+}
+
+/* Timeline horizontal connector beam */
+.timeline-connector-right {
+  position: absolute;
+  top: 42px;
+  right: 50%;
+  width: 38px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #FBAE42);
+  z-index: 4;
+}
+
+.timeline-connector-left {
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  width: 38px;
+  height: 2px;
+  background: linear-gradient(90deg, #FBAE42, transparent);
+  z-index: 4;
+}
+
+/* Responsive mobile layout for timeline */
+@media (max-width: 767.98px) {
+  /* In RTL: align line to right edge */
+  html[dir="rtl"] .timeline-track,
+  html[dir="rtl"] .timeline-progress {
+    left: auto;
+    right: 22px;
+    transform: none;
+  }
+
+  html[dir="rtl"] .timeline-node-dot {
+    left: auto;
+    right: 2px;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    font-size: 0.78rem;
+  }
+
+  html[dir="rtl"] .timeline-card-col {
+    padding-right: 52px !important;
+    padding-left: 0 !important;
+  }
+
+  /* In LTR: align line to left edge */
+  html[dir="ltr"] .timeline-track,
+  html[dir="ltr"] .timeline-progress {
+    left: 22px;
+    right: auto;
+    transform: none;
+  }
+
+  html[dir="ltr"] .timeline-node-dot {
+    left: 2px;
+    right: auto;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    font-size: 0.78rem;
+  }
+
+  html[dir="ltr"] .timeline-card-col {
+    padding-left: 52px !important;
+    padding-right: 0 !important;
+  }
+
+  .timeline-empty-col {
+    display: none !important;
+  }
+
+  .timeline-connector-right,
+  .timeline-connector-left {
+    display: none !important;
+  }
+}
+
+/* =========================================================
+   UNIVERSAL ZERO-SHARP-EDGES DESIGN SYSTEM
+   Enforces generous 24px-32px organic curves on all cards,
+   modals, frames, and interactive elements across the platform
+   ========================================================= */
+.card,
+.card-body,
+.bento-card-modern,
+.join-card,
+.join-card-modern,
+.about-mv-card,
+.home-file-card,
+.file-card,
+.gallery-card,
+.image-frame-container,
+.modern-image-frame,
+.timeline-card-col > div,
+.video-turntable-wrapper,
+.video-turntable-wrapper > div,
+.map-responsive,
+.map-responsive iframe,
+.dropdown-menu,
+.dropdown-menu-custom,
+.modal-content,
+.alert {
+  border-radius: 1.75rem !important; /* 28px organic soft curve */
+  overflow: hidden;
+}
+
+.image-frame-container img,
+.modern-image-frame img,
+.gallery-img,
+.file-card-image,
+.bento-card-modern img {
+  border-radius: 1.5rem !important;
+}

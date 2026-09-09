@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Concerns\HasNavigationBadge;
 use App\Filament\Resources\CommitteeResource\Pages;
 use App\Filament\Resources\CommitteeResource\RelationManagers;
 use App\Models\Committee;
@@ -16,27 +17,18 @@ use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Guava\FilamentIconPicker\Forms\IconPicker;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CommitteeResource extends Resource
 {
+    use HasNavigationBadge;
+
     protected static ?string $model = Committee::class;
 
     protected static ?int $navigationSort = 2;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function getNavigationBadge(): ?string
-    {
-        return static::getEloquentQuery()->count();
-    }
-
-    public static function getNavigationBadgeColor(): ?string
-    {
-        return static::getEloquentQuery()->count() ? 'primary' : 'gray';
-    }
 
     public static function form(Form $form): Form
     {
@@ -49,7 +41,7 @@ class CommitteeResource extends Resource
                         Forms\Components\RichEditor::make('description'),
                     ])->columns(1),
 
-                    Step::make('step 1 (data)')->schema([
+                    Step::make('step 2 (data)')->schema([
                         Repeater::make('data')->schema([
                             TextInput::make('title')->required(),
                             FileUpload::make('image')->image()->imageEditor()->previewable(),
@@ -74,9 +66,6 @@ class CommitteeResource extends Resource
 
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
-
-                Tables\Columns\TextColumn::make('description')->html()->limit(30)
-                    ->badge()->searchable(),
 
                 Tables\Columns\TextColumn::make('description')->html()->limit(30)
                     ->badge()->searchable(),

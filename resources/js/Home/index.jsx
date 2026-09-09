@@ -1,51 +1,32 @@
 import React from 'react';
-import Nav from '../Components/Nav';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+import MainLayout from '../Layouts/MainLayout';
 import Banner from './Banner';
-
-import { motion } from 'framer-motion';
-import { FaHandsHelping } from 'react-icons/fa';
 import HomeAboutSection from './HomeAboutSection';
+import HomeVideoSection from './HomeVideoSection';
 import HomeFilesSection from './HomeFilesSection';
 import HomeGallerySection from './HomeGallerySection';
 import HomeJoinUsSection from './HomeJoinUsSection';
 
-const Home = (props) => {
+export default function Home(props) {
   return (
-    <>
-      <Header />
-      <Nav />
+    <MainLayout>
+      {/* Hero & Dynamic 3D Slider */}
+      <Banner sliders={props.sliders} />
 
-      <div className="spacer"></div>
-
-      <motion.div
-        className="text-center py-4"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="font-weight-bold Hellow-Home">
-          <FaHandsHelping className="Hellow-in-Home mr-2" size={28} />
-          <span>أهلا بيكم في موقع </span>
-          <span className="Hellow-in-Home">صناع الحياة الإسماعيلية</span>
-        </h2>
-      </motion.div>
-
-      <Banner sliders={props.sliders}/>
-
-      <div className="spacer"></div>
+      {/* About Foundation Highlights */}
       <HomeAboutSection />
-      <div className="spacer"></div>
-      <HomeFilesSection files={props.committee}/>
-      <div className="spacer"></div>
+
+      {/* Cinematic Interactive Video Showcase */}
+      <HomeVideoSection />
+
+      {/* Committees & Files Grid (All 13 Committees) */}
+      <HomeFilesSection files={props.committee} />
+
+      {/* Field Work Gallery */}
       <HomeGallerySection />
-      <div className="spacer"></div>
+
+      {/* Volunteer Call to Action */}
       <HomeJoinUsSection />
-
-      <Footer />
-    </>
+    </MainLayout>
   );
-};
-
-export default Home;
+}

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('qualification');
             $table->date('birthday');
             $table->string('job')->nullable();
-            $table->string('personal_photo');
+            $table->string('personal_photo')->nullable();
             $table->foreignId('committee_id')->nullable()->constrained()->nullOnDelete();
             $table->foreignId('center_id')->nullable()->constrained()->nullOnDelete();
             $table->timestamp('email_verified_at')->nullable();

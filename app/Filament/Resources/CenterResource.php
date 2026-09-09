@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Concerns\HasNavigationBadge;
 use App\Filament\Resources\CenterResource\Pages;
 use App\Filament\Resources\CenterResource\RelationManagers;
 use App\Models\Center;
@@ -15,21 +16,13 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class CenterResource extends Resource
 {
+    use HasNavigationBadge;
+
     protected static ?string $model = Center::class;
 
     protected static ?int $navigationSort = 3;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
-
-    public static function getNavigationBadge(): ?string
-    {
-        return static::getEloquentQuery()->count();
-    }
-
-    public static function getNavigationBadgeColor(): ?string
-    {
-        return static::getEloquentQuery()->count() ? 'primary' : 'gray';
-    }
 
     public static function form(Form $form): Form
     {
