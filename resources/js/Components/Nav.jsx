@@ -43,7 +43,7 @@ export default function Nav() {
         {/* Logo */}
         <Link className="flex items-center no-underline" href="/">
           <img
-            src="/Images/logo.png"
+            src="/images/logo.png"
             alt="Life Makers Ismailia"
             style={{ width: "115px", height: "auto" }}
           />

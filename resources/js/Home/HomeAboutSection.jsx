@@ -111,7 +111,7 @@ export default function HomeAboutSection() {
             }}>
               <div className="overflow-hidden relative" style={{ border: "1px solid rgba(255,255,255,0.2)", borderRadius: "1.75rem" }}>
                 <img
-                  src="/Images/home.jpg"
+                  src="/images/home.jpg"
                   alt="Life Makers Team"
                   className="max-w-full h-auto block"
                   style={{ maxHeight: "420px", width: "100%", objectFit: "cover", borderRadius: "1.75rem" }}

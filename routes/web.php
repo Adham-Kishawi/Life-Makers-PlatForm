@@ -37,8 +37,9 @@ Route::prefix('account')->group(function(){
         ]);
 
         Auth::login($user);
+        $request->session()->regenerate();
 
-return redirect('/');
+        return redirect('/');
     })->middleware('throttle:5,10');
 
     Route::post('login', function(Request $request){
@@ -53,6 +54,7 @@ return redirect('/');
 
         if ($user && Hash::check($credentials['password'], $user->password)) {
             Auth::login($user);
+            $request->session()->regenerate();
             return redirect()->intended('/');
         }
 

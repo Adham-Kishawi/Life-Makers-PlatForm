@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #014976;
+    --primary-hover: #013758;
+    --accent: #FBAE42;
+    --accent-hover: #e59b32;
+    
+    --main-color: #014976;
+    --main-hover: #013758;
+    --secondary-color: #FBAE42;
+    --secondary-hover: #e59b32;
+    --body-color: #f8fafc;
+    --card-color: #ffffff;
+    --card-border: #e2e8f0;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+    --light-color: #f8f9fa;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(1, 73, 118, 0.1);
+    --glass-shadow: 0 10px 30px -5px rgba(1, 73, 118, 0.08);
+  }
+
+  .dark, .dark-mode, html.dark, html.dark-mode, body.dark-mode {
+    --primary: #38bdf8;
+    --primary-hover: #7dd3fc;
+    --accent: #FBAE42;
+    --accent-hover: #fbbf24;
+    
+    --main-color: #38bdf8;
+    --main-hover: #7dd3fc;
+    --secondary-color: #FBAE42;
+    --secondary-hover: #fbbf24;
+    --body-color: #0b1120;
+    --card-color: #111827;
+    --card-border: #1e293b;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --light-color: #f1f5f9;
+    --glass-bg: rgba(11, 17, 32, 0.92);
+    --glass-border: rgba(56, 189, 248, 0.18);
+    --glass-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+  }
+
+  html {
+    overflow-x: clip;
+  }
+
+  body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Light Mode Overrides for Slate Utilities */
+html.light, html.light-mode, body.light, body.light-mode {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light .bg-\[\#0b1120\],
+html.light-mode .bg-\[\#0b1120\],
+html.light .bg-\[\#0b1120\]\/95,
+html.light-mode .bg-\[\#0b1120\]\/95 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-slate-950,
+html.light-mode .bg-slate-950 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-slate-900,
+html.light-mode .bg-slate-900,
+html.light .bg-slate-900\/50,
+html.light-mode .bg-slate-900\/50,
+html.light .bg-slate-900\/60,
+html.light-mode .bg-slate-900\/60 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .border-slate-800,
+html.light-mode .border-slate-800,
+html.light .border-slate-800\/80,
+html.light-mode .border-slate-800\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .border-slate-700,
+html.light-mode .border-slate-700 {
+  border-color: #cbd5e1 !important;
+}
+
+html.light h1:not(.hero-text),
+html.light h2:not(.hero-text),
+html.light h3:not(.hero-text),
+html.light-mode h1:not(.hero-text),
+html.light-mode h2:not(.hero-text),
+html.light-mode h3:not(.hero-text) {
+  color: #0f172a !important;
+}
+
+html.light .text-white:not(.hero-text),
+html.light-mode .text-white:not(.hero-text) {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-200:not(.hero-text),
+html.light .text-slate-300:not(.hero-text),
+html.light-mode .text-slate-200:not(.hero-text),
+html.light-mode .text-slate-300:not(.hero-text) {
+  color: #334155 !important;
+}
+
+html.light .text-slate-400:not(.hero-text),
+html.light-mode .text-slate-400:not(.hero-text) {
+  color: #64748b !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--body-color, #0b1120);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--card-border, #1e293b);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FBAE42;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-amber {
+  background: rgba(251, 174, 66, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(251, 174, 66, 0.25);
+}
+
+/* ====== Interactive Zigzag Timeline ====== */
+.timeline-wrapper {
+  position: relative;
+  padding: 3rem 0;
+}
+
+.timeline-track {
+  position: absolute;
+  top: 10px;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  z-index: 1;
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: linear-gradient(to bottom, #FBAE42 0%, #eab308 100%);
+  box-shadow: 0 0 16px rgba(251, 174, 66, 0.8);
+  border-radius: 999px;
+  z-index: 2;
+  transition: height 0.1s linear;
+}
+
+.timeline-node-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #0f172a;
+  border: 2px solid #FBAE42;
+  box-shadow: 0 0 16px rgba(251, 174, 66, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #FBAE42;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* Perspective utilities for 3D flip card */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}

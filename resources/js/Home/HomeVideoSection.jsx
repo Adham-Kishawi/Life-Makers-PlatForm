@@ -227,7 +227,7 @@ export default function HomeVideoSection() {
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
               >
-                <source src="/video/life-makers.mp4" type="video/mp4" />
+                <source src="/videos/life-makers.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 

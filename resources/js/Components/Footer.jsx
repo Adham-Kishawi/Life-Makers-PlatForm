@@ -22,7 +22,7 @@ export default function Footer() {
           {/* Column 1: Brand & Bio */}
           <div className="col-12 col-md-4 mb-4">
             <Link href="/" className="inline-block mb-4">
-              <img src="/Images/logowhite.png" alt="Life Makers" style={{ width: "135px", height: "auto" }} />
+              <img src="/images/logowhite.png" alt="Life Makers" style={{ width: "135px", height: "auto" }} />
             </Link>
             <p className="text-light text-[80%]" style={{ lineHeight: "1.8", opacity: 0.9 }}>
               <strong>{t("footer_about_title")}</strong>

@@ -7,37 +7,37 @@ export default function AboutGallery() {
 
   const galleryItems = [
     {
-      src: "/Images/Gallery/GalleryHome (1).jpg",
+      src: "/images/Gallery/GalleryHome (1).jpg",
       title: "قوافل الإغاثة الميدانية",
       subtitle: "متطوعو صناع الحياة في توزيع المساعدات على الأسر الأولى بالرعاية",
       category: "قوافل وميدان"
     },
     {
-      src: "/Images/Gallery/GalleryHome (2).jpg",
+      src: "/images/Gallery/GalleryHome (2).jpg",
       title: "مبادرات التعليم وبناء المهارات",
       subtitle: "ورش تدريبية تفاعلية وتجهيز الشنط المدرسية للطلاب المستحقين",
       category: "التعليم"
     },
     {
-      src: "/Images/Gallery/GalleryHome (3).jpg",
+      src: "/images/Gallery/GalleryHome (3).jpg",
       title: "العمل التطوعي وروح الفريق",
       subtitle: "شباب فرع الإسماعيلية يشاركون في تخطيط وتنفيذ المبادرات",
       category: "شباب وتطوع"
     },
     {
-      src: "/Images/Gallery/GalleryHome (4).jpg",
+      src: "/images/Gallery/GalleryHome (4).jpg",
       title: "مشروع شريان الحياة والصحة",
       subtitle: "حملات التبرع بالدم والقوافل الطبية المتخصصة في القرى",
       category: "صحة وإغاثة"
     },
     {
-      src: "/Images/Gallery/GalleryHome (5).jpg",
+      src: "/images/Gallery/GalleryHome (5).jpg",
       title: "حملات التكافل والإطعام",
       subtitle: "تجهيز وتوزيع الوجبات والكراتين الغذائية في المناسبات والمواسم",
       category: "تكافل مجتمعي"
     },
     {
-      src: "/Images/Gallery/GalleryHome (6).jpg",
+      src: "/images/Gallery/GalleryHome (6).jpg",
       title: "ملتقيات قيادات التطوع",
       subtitle: "معسكرات بناء القدرات وإعداد قادة العمل الأهلي المستقبلي",
       category: "تدريب وقيادة"
